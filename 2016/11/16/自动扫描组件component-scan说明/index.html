@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="胡说博客">
-    <title>一般Java Web的项目目录结构（转） - 胡说博客</title>
+    <title>自动扫描组件&lt;context:component-scan&gt;使用说明 - 胡说博客</title>
     <meta name="author" content="Hu Qishuai">
     
     
@@ -15,28 +15,16 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="WebRoot-
-       -common   (&amp;#x7CFB;&amp;#x7EDF;&amp;#x6846;&amp;#x67B6;&amp;#x516C;&amp;#x7528;jsp &amp;#x5982;footer.jsp,header.jsp)
-       -images
-       -scripts  (javascript&amp;#x5E93;&amp;#x7B49;)
-    -styles -   (css&amp;#x6A21;&amp;">
+    <meta name="description" content="&amp;#x5728;xml&amp;#x914D;&amp;#x7F6E;&amp;#x4E86;&amp;#x8FD9;&amp;#x4E2A;&amp;#x6807;&amp;#x7B7E;&amp;#x540E;&amp;#xFF0C;spring&amp;#x53EF;&amp;#x4EE5;&amp;#x81EA;&amp;#x52A8;&amp;#x53BB;&amp;#x626B;&amp;#x63CF;base-pack&amp;#x4E0B;&amp;#x9762;&amp;#x6216;&amp;#x8005;&amp;#x5B50;&amp;#x530">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="一般Java Web的项目目录结构（转）">
-<meta property="og:url" content="http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/index.html">
+<meta property="og:title" content="自动扫描组件<context:component-scan>使用说明">
+<meta property="og:url" content="http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/index.html">
 <meta property="og:site_name" content="胡说博客">
-<meta property="og:description" content="WebRoot-
-       -common   (&amp;#x7CFB;&amp;#x7EDF;&amp;#x6846;&amp;#x67B6;&amp;#x516C;&amp;#x7528;jsp &amp;#x5982;footer.jsp,header.jsp)
-       -images
-       -scripts  (javascript&amp;#x5E93;&amp;#x7B49;)
-    -styles -   (css&amp;#x6A21;&amp;">
-<meta property="og:updated_time" content="2016-11-15T14:05:23.979Z">
+<meta property="og:description" content="&amp;#x5728;xml&amp;#x914D;&amp;#x7F6E;&amp;#x4E86;&amp;#x8FD9;&amp;#x4E2A;&amp;#x6807;&amp;#x7B7E;&amp;#x540E;&amp;#xFF0C;spring&amp;#x53EF;&amp;#x4EE5;&amp;#x81EA;&amp;#x52A8;&amp;#x53BB;&amp;#x626B;&amp;#x63CF;base-pack&amp;#x4E0B;&amp;#x9762;&amp;#x6216;&amp;#x8005;&amp;#x5B50;&amp;#x530">
+<meta property="og:updated_time" content="2016-11-16T15:40:37.263Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一般Java Web的项目目录结构（转）">
-<meta name="twitter:description" content="WebRoot-
-       -common   (&amp;#x7CFB;&amp;#x7EDF;&amp;#x6846;&amp;#x67B6;&amp;#x516C;&amp;#x7528;jsp &amp;#x5982;footer.jsp,header.jsp)
-       -images
-       -scripts  (javascript&amp;#x5E93;&amp;#x7B49;)
-    -styles -   (css&amp;#x6A21;&amp;">
+<meta name="twitter:title" content="自动扫描组件<context:component-scan>使用说明">
+<meta name="twitter:description" content="&amp;#x5728;xml&amp;#x914D;&amp;#x7F6E;&amp;#x4E86;&amp;#x8FD9;&amp;#x4E2A;&amp;#x6807;&amp;#x7B7E;&amp;#x540E;&amp;#xFF0C;spring&amp;#x53EF;&amp;#x4EE5;&amp;#x81EA;&amp;#x52A8;&amp;#x53BB;&amp;#x626B;&amp;#x63CF;base-pack&amp;#x4E0B;&amp;#x9762;&amp;#x6216;&amp;#x8005;&amp;#x5B50;&amp;#x530">
     
     
         
@@ -44,6 +32,9 @@
     
         <meta property="og:image" content="http://blog.huqs92.com/assets/images/top.jpg"/>
     
+    
+        <meta property="og:image" content="http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/spring.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/spring.jpg" />
     
     
     
@@ -237,13 +228,13 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            一般Java Web的项目目录结构（转）
+            自动扫描组件&lt;context:component-scan&gt;使用说明
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-11-15T22:03:48+08:00">
+    <time itemprop="datePublished" datetime="2016-11-16T23:20:52+08:00">
 	
-		    11月 15, 2016
+		    11月 16, 2016
     	
     </time>
     
@@ -253,38 +244,50 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <pre><code>WebRoot-
-       -common   (&#x7CFB;&#x7EDF;&#x6846;&#x67B6;&#x516C;&#x7528;jsp &#x5982;footer.jsp,header.jsp)
-       -images
-       -scripts  (javascript&#x5E93;&#x7B49;)
-    -styles -   (css&#x6A21;&#x7248;)
-       - css &#x98CE;&#x683C;1
-       - css &#x98CE;&#x683C;2
-       -WEB-INF -
-    -pages   (&#x9879;&#x76EE;jsp&#x9875;&#x9762;&#xFF0C;&#x4E3A;&#x63D0;&#x9AD8;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x653E;&#x5230;WEB-INF &#x4E0B;&#x9762;)
-    -classes
-    -conf(&#x9879;&#x76EE;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;)
-    -lib
-</code></pre><p>&#x5728;ajax&#x98CE;&#x683C;&#x4E0B;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x6765;&#x7684;jsp&#x9875;&#x9762;&#x5F00;&#x53D1;&#x6765;&#x8BF4;&#xFF0C;client&#x7684;&#x8868;&#x8FBE;&#x80FD;&#x529B;&#x5F97;&#x5230;&#x4E86;&#x5F88;&#x5927;&#x7684;&#x63D0;&#x5347;&#xFF0C;<br>&#x5C24;&#x5176;&#x662F;js&#x6587;&#x4EF6;&#x53D8;&#x5F97;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x800C;js&#x6587;&#x4EF6;&#x663E;&#x7136;&#x6BD4;&#x5355;&#x7EAF;&#x7684;jsp&#x6587;&#x4EF6;&#x53EF;&#x8BFB;&#x6027;&#x66F4;&#x9700;&#x8981;&#x7BA1;&#x7406;&#x3002;<br>&#x5982;&#x4F55;&#x63D0;&#x9AD8;js&#x6587;&#x4EF6;&#x7684;&#x53EF;&#x7BA1;&#x7406;&#x80FD;&#x529B;&#xFF0C;&#x53EF;&#x590D;&#x7528;&#x80FD;&#x529B;&#xFF0C;&#x53EF;&#x8BFB;&#x6027;&#xFF0C;&#x7BA1;&#x7406;js lib&#x5E93;&#x7684;&#x5347;&#x7EA7;&#x7B49;<br>&#x662F;ajax&#x98CE;&#x683C;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x95EE;&#x9898;.</p>
-<p>&#x6309;&#x4E0A;&#x9762;&#x7684;&#x76EE;&#x5F55;&#x89C4;&#x5212;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x6269;&#x5C55;</p>
-<pre><code>WebRoot-
-       -common   (&#x7CFB;&#x7EDF;&#x6846;&#x67B6;&#x516C;&#x7528;jsp &#x5982;footer.jsp,header.jsp)
-       -images
-       -scripts  (javascript&#x5E93;&#x7B49;)
-                -dojo                --dojo&#x5E93;,&#x8FDB;&#x884C;&#x5E93;&#x7684;&#x7EDF;&#x4E00;&#x7248;&#x672C;&#x7BA1;&#x7406;
-                -ext                 --extjs&#x5E93;
-                   -project             -- &#x5F53;&#x524D;&#x9879;&#x76EE;js&#x76EE;&#x5F55;
-        -styles -                   (css&#x6A21;&#x7248;)
-               - css &#x98CE;&#x683C;1
-               - css &#x98CE;&#x683C;2
-       -WEB-INF -
-                -pages   (&#x9879;&#x76EE;jsp&#x9875;&#x9762;&#xFF0C;&#x4E3A;&#x63D0;&#x9AD8;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x653E;&#x5230;WEB-INF &#x4E0B;&#x9762;)
-                -classes
-                -conf    (&#x9879;&#x76EE;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;)
-                -lib
-</code></pre><p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x628A;jsp&#x548C;js&#x5206;&#x5F00;&#x653E;&#x7F6E;&#xFF0C;&#x597D;&#x5904;&#x662F;&#x63D0;&#x9AD8;&#x4E86;jsp&#x9875;&#x9762;&#x7684;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x574F;&#x5904;&#x662F;&#x5728;ajax&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;js&#x901A;&#x5E38;&#x548C;&#x9875;&#x9762;&#x5C55;&#x73B0;<br>jsp&#x5173;&#x7CFB;&#x6BD4;&#x8F83;&#x7D27;&#x5BC6;&#xFF0C;&#x5206;&#x5F00;&#x653E;&#x7F6E;&#x9700;&#x8981;&#x627E;2&#x4E2A;&#x5730;&#x65B9;&#x624D;&#x603B;&#x80FD;&#x628A;&#x7A0B;&#x5E8F;&#x770B;&#x5168;&#x4E86;.</p>
+            <p>&#x5728;xml&#x914D;&#x7F6E;&#x4E86;&#x8FD9;&#x4E2A;&#x6807;&#x7B7E;&#x540E;&#xFF0C;spring&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x53BB;&#x626B;&#x63CF;base-pack&#x4E0B;&#x9762;&#x6216;&#x8005;&#x5B50;&#x5305;&#x4E0B;&#x9762;&#x7684;Java&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x626B;&#x63CF;&#x5230;&#x6709;@Component @Controller@Service&#x7B49;&#x8FD9;&#x4E9B;&#x6CE8;&#x89E3;&#x7684;&#x7C7B;&#xFF0C;&#x5219;&#x628A;&#x8FD9;&#x4E9B;&#x7C7B;&#x6CE8;&#x518C;&#x4E3A;bean&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;<context:component-scan>&#x90A3;&#x4E48;<context:annotation-config>&#x6807;&#x7B7E;&#x5C31;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x518D;xml&#x4E2D;&#x914D;&#x7F6E;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x524D;&#x8005;&#x5305;&#x542B;&#x4E86;&#x540E;&#x8005;&#x3002;&#x53E6;&#x5916;<context:annotation-config>&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x5B50;&#x6807;&#x7B7E;</context:annotation-config></context:annotation-config></context:component-scan></p>
+<ol>
+<li><context:include-filter>
+</context:include-filter></li>
+<li><context:exclude-filter>
+
+</context:exclude-filter></li>
+</ol>
+<p>&#x5728;&#x8BF4;&#x660E;&#x8FD9;&#x4E24;&#x4E2A;&#x5B50;&#x6807;&#x7B7E;&#x524D;&#xFF0C;&#x5148;&#x8BF4;&#x4E00;&#x4E0B;<context:component-scan>&#x6709;&#x4E00;&#x4E2A;use-default-filters&#x5C5E;&#x6027;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x9ED8;&#x8BA4;&#x4E3A;true,&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#x4F1A;&#x626B;&#x63CF;&#x6307;&#x5B9A;&#x5305;&#x4E0B;&#x7684;&#x5168;&#x90E8;&#x7684;&#x6807;&#x6709;@Component&#x7684;&#x7C7B;&#xFF0C;&#x5E76;&#x6CE8;&#x518C;&#x6210;bean&#x3002;&#x4E5F;&#x5C31;&#x662F;@Component&#x7684;&#x5B50;&#x6CE8;&#x89E3;@Service,@Reposity&#x7B49;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4EC5;&#x4EC5;&#x662F;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x8FD9;&#x4E48;&#x5199;</context:component-scan></p>
+<pre><code>&lt;context:component-scan base-package=&quot;tv.huan.weisp.web&quot;/&gt;
+</code></pre><p> Use-default-filter&#x6B64;&#x65F6;&#x4E3A;true&#x90A3;&#x4E48;&#x4F1A;&#x5BF9;base-package&#x5305;&#x6216;&#x8005;&#x5B50;&#x5305;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x884C;java&#x7C7B;&#x8FDB;&#x884C;&#x626B;&#x63CF;,&#x5E76;&#x628A;&#x5339;&#x914D;&#x7684;java&#x7C7B;&#x6CE8;&#x518C;&#x6210;bean&#x3002;</p>
+ <a id="more"></a>
+<p> &#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x8FD9;&#x79CD;&#x626B;&#x63CF;&#x7684;&#x7C92;&#x5EA6;&#x6709;&#x70B9;&#x592A;&#x5927;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x53EA;&#x60F3;&#x626B;&#x63CF;&#x6307;&#x5B9A;&#x5305;&#x4E0B;&#x9762;&#x7684;Controller&#xFF0C;&#x8BE5;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x6B64;&#x65F6;&#x5B50;&#x6807;&#x7B7E;<context:incluce-filter>&#x5C31;&#x8D77;&#x5230;&#x4E86;&#x52C7;&#x6B66;&#x4E4B;&#x5730;&#x3002;&#x5982;&#x4E0B;&#x6240;&#x793A;</context:incluce-filter></p>
+<pre><code>&lt;context:component-scan base-package=&quot;tv.huan.weisp.web .controller&quot;&gt;  
+
+&lt;context:include-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;   
+
+&lt;/context:component-scan&gt;  
+</code></pre><p>&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x53EA;&#x626B;&#x63CF;base-package&#x6307;&#x5B9A;&#x4E0B;&#x7684;&#x6709;@Controller&#x4E0B;&#x7684;java&#x7C7B;&#xFF0C;&#x5E76;&#x6CE8;&#x518C;&#x6210;bean</p>
+<p>&#x4F46;&#x662F;&#x56E0;&#x4E3A;use-dafault-filter&#x5728;&#x4E0A;&#x9762;&#x5E76;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x4E3A;true&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x628A;&#x4E0A;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x6539;&#x6210;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x4E0E;&#x4F60;&#x671F;&#x671B;&#x76F8;&#x6096;&#x7684;&#x7ED3;&#x679C;&#xFF08;&#x6CE8;&#x610F;base-package&#x5305;&#x503C;&#x5F97;&#x53D8;&#x5316;&#xFF09;</p>
+<pre><code>&lt;context:component-scan base-package=&quot;tv.huan.weisp.web &quot;&gt;  
+
+&lt;context:include-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;   
+
+&lt;/context:component-scan&gt;  
+</code></pre><p>&#x6B64;&#x65F6;&#xFF0C;spring&#x4E0D;&#x4EC5;&#x626B;&#x63CF;&#x4E86;@Controller&#xFF0C;&#x8FD8;&#x626B;&#x63CF;&#x4E86;&#x6307;&#x5B9A;&#x5305;&#x6240;&#x5728;&#x7684;&#x5B50;&#x5305;service&#x5305;&#x4E0B;&#x6CE8;&#x89E3;@Service&#x7684;java&#x7C7B;</p>
+<p>&#x6B64;&#x65F6;&#x6307;&#x5B9A;&#x7684;include-filter&#x6CA1;&#x6709;&#x8D77;&#x5230;&#x4F5C;&#x7528;&#xFF0C;&#x53EA;&#x8981;&#x628A;use-default-filter&#x8BBE;&#x7F6E;&#x6210;false&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5728;base-packeage&#x914D;&#x7F6E;&#x591A;&#x4E2A;&#x5305;&#x540D;&#x8FD9;&#x79CD;&#x4E0D;&#x662F;&#x5F88;&#x4F18;&#x96C5;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x4E86;&#x3002;&#x5373;&#xFF1A;</p>
+<pre><code>&lt;context:component-scan base-package=&quot;tv.huan.weisp.web&quot;  use-default-filters=&quot;false&quot; &gt;  
+
+&lt;context:include-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;   
+
+&lt;/context:component-scan&gt;
+</code></pre><p>&#x53E6;&#x5916;&#x5728;&#x6211;&#x53C2;&#x4E0E;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x5728;base-package&#x6307;&#x5B9A;&#x7684;&#x5305;&#x4E2D;&#x6709;&#x7684;&#x5B50;&#x5305;&#x662F;&#x4E0D;&#x542B;&#x6709;&#x6CE8;&#x89E3;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x7528;&#x626B;&#x63CF;&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;<context:exclude-filter>&#x6765;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#xFF0C;&#x8BF4;&#x660E;&#x6B64;&#x5305;&#x4E0D;&#x9700;&#x8981;&#x88AB;&#x626B;&#x63CF;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</context:exclude-filter></p>
+<pre><code>&lt;context:component-scan base-package=&quot;com.hqs.htest&quot; use-default-filters=&quot;false&quot; &gt;            
+      &lt;context:exclude-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;&gt;&lt;/context:exclude-filter&gt;
+  &lt;/context:component-scan&gt;
+</code></pre><p>&#x7EFC;&#x5408;&#x4EE5;&#x4E0A;&#x8BF4;&#x660E;</p>
+<ul>
+<li>&#x53EA;&#x6709;use-default-filters=&#x201D;false&#x201D;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF1A;<context:include-filter>&#x624D;&#x4F1A;<strong>&#x53EA;</strong>&#x626B;&#x63CF;&#x6307;&#x5B9A;&#x7684;&#x5305;&#x3002;</context:include-filter></li>
+<li>use-default-filters=&#x201D;true&#x201D;&#x7684;&#x60C5;&#x51B5;(&#x8BE5;&#x5C5E;&#x6027;&#x9ED8;&#x8BA4;&#x4E3A;true),<context:exclude-filter>&#x6392;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x5305;&#x4E0D;&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x3002;</context:exclude-filter></li>
+</ul>
 <hr>
-<p>&#x8F6C;&#x8F7D;&#x81EA;&#xFF1A;<a href="http://www.educity.cn/wenda/124790.html" target="_blank" rel="external">&#x6B63;&#x5E38;Java Web&#x7684;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF08;&#x8F6C;&#xFF09;</a></p>
+<p>&#x53C2;&#x8003;&#x81EA;&#xFF1A;<a href="http://blog.csdn.net/chunqiuwei/article/details/16115135" target="_blank" rel="external"><context:component-scan>&#x4F7F;&#x7528;&#x8BF4;&#x660E;</context:component-scan></a></p>
 
             
         </div>
@@ -294,7 +297,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">标签</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/javaWeb/">javaWeb</a> <a class="tag tag--primary tag--small t-link" href="/tags/目录/">目录</a> <a class="tag tag--primary tag--small t-link" href="/tags/结构/">结构</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/component-scan/">component-scan</a> <a class="tag tag--primary tag--small t-link" href="/tags/javaWeb/">javaWeb</a> <a class="tag tag--primary tag--small t-link" href="/tags/springMVC/">springMVC</a>
 
             </div>
         
@@ -303,7 +306,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/15/如何发布文章到hexo搭建的博客网站/"  data-tooltip="如何发布文章到hexo搭建的博客网站(转)">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -311,7 +314,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/04/hexoBlog/" data-tooltip="hexo + github pages搭建个人博客">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/15/如何发布文章到hexo搭建的博客网站/" data-tooltip="如何发布文章到hexo搭建的博客网站(转)">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -326,17 +329,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -360,8 +363,8 @@
 
         
             
-                <div id="ds-thread" class="ds-thread" data-thread-key="2016/11/15/一般Java Web的项目目录结构（转）/"
-     data-title="一般Java Web的项目目录结构（转）" data-url="http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
+                <div id="ds-thread" class="ds-thread" data-thread-key="2016/11/16/自动扫描组件component-scan说明/"
+     data-title="自动扫描组件&lt;context:component-scan&gt;使用说明" data-url="http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/">
 </div>
 
             
@@ -385,7 +388,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/15/如何发布文章到hexo搭建的博客网站/"  data-tooltip="如何发布文章到hexo搭建的博客网站(转)">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -393,7 +396,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/04/hexoBlog/" data-tooltip="hexo + github pages搭建个人博客">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/15/如何发布文章到hexo搭建的博客网站/" data-tooltip="如何发布文章到hexo搭建的博客网站(转)">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -408,17 +411,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -444,17 +447,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/">
                 <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/">
                 <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/">
                 <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
             </a>
         </li>

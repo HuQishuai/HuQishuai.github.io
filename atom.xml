@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.huqs92.com/"/>
-  <updated>2016-11-15T14:21:13.105Z</updated>
+  <updated>2016-11-16T15:40:37.263Z</updated>
   <id>http://blog.huqs92.com/</id>
   
   <author>
@@ -16,11 +16,90 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自动扫描组件&lt;context:component-scan&gt;使用说明</title>
+    <link href="http://blog.huqs92.com/2016/11/16/%E8%87%AA%E5%8A%A8%E6%89%AB%E6%8F%8F%E7%BB%84%E4%BB%B6component-scan%E8%AF%B4%E6%98%8E/"/>
+    <id>http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/</id>
+    <published>2016-11-16T15:20:52.000Z</published>
+    <updated>2016-11-16T15:40:37.263Z</updated>
+    
+    <content type="html"><![CDATA[<p>&#x5728;xml&#x914D;&#x7F6E;&#x4E86;&#x8FD9;&#x4E2A;&#x6807;&#x7B7E;&#x540E;&#xFF0C;spring&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x53BB;&#x626B;&#x63CF;base-pack&#x4E0B;&#x9762;&#x6216;&#x8005;&#x5B50;&#x5305;&#x4E0B;&#x9762;&#x7684;Java&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x626B;&#x63CF;&#x5230;&#x6709;@Component @Controller@Service&#x7B49;&#x8FD9;&#x4E9B;&#x6CE8;&#x89E3;&#x7684;&#x7C7B;&#xFF0C;&#x5219;&#x628A;&#x8FD9;&#x4E9B;&#x7C7B;&#x6CE8;&#x518C;&#x4E3A;bean&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;<context:component-scan>&#x90A3;&#x4E48;<context:annotation-config>&#x6807;&#x7B7E;&#x5C31;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x518D;xml&#x4E2D;&#x914D;&#x7F6E;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x524D;&#x8005;&#x5305;&#x542B;&#x4E86;&#x540E;&#x8005;&#x3002;&#x53E6;&#x5916;<context:annotation-config>&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x5B50;&#x6807;&#x7B7E;</context:annotation-config></context:annotation-config></context:component-scan></p>
+<ol>
+<li><context:include-filter>
+</context:include-filter></li>
+<li><context:exclude-filter>
+
+</context:exclude-filter></li>
+</ol>
+<p>&#x5728;&#x8BF4;&#x660E;&#x8FD9;&#x4E24;&#x4E2A;&#x5B50;&#x6807;&#x7B7E;&#x524D;&#xFF0C;&#x5148;&#x8BF4;&#x4E00;&#x4E0B;<context:component-scan>&#x6709;&#x4E00;&#x4E2A;use-default-filters&#x5C5E;&#x6027;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x9ED8;&#x8BA4;&#x4E3A;true,&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#x4F1A;&#x626B;&#x63CF;&#x6307;&#x5B9A;&#x5305;&#x4E0B;&#x7684;&#x5168;&#x90E8;&#x7684;&#x6807;&#x6709;@Component&#x7684;&#x7C7B;&#xFF0C;&#x5E76;&#x6CE8;&#x518C;&#x6210;bean&#x3002;&#x4E5F;&#x5C31;&#x662F;@Component&#x7684;&#x5B50;&#x6CE8;&#x89E3;@Service,@Reposity&#x7B49;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4EC5;&#x4EC5;&#x662F;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x8FD9;&#x4E48;&#x5199;</context:component-scan></p>
+<pre><code>&lt;context:component-scan base-package=&quot;tv.huan.weisp.web&quot;/&gt;
+</code></pre><p> Use-default-filter&#x6B64;&#x65F6;&#x4E3A;true&#x90A3;&#x4E48;&#x4F1A;&#x5BF9;base-package&#x5305;&#x6216;&#x8005;&#x5B50;&#x5305;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x884C;java&#x7C7B;&#x8FDB;&#x884C;&#x626B;&#x63CF;,&#x5E76;&#x628A;&#x5339;&#x914D;&#x7684;java&#x7C7B;&#x6CE8;&#x518C;&#x6210;bean&#x3002;</p>
+ <a id="more"></a>
+<p> &#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x8FD9;&#x79CD;&#x626B;&#x63CF;&#x7684;&#x7C92;&#x5EA6;&#x6709;&#x70B9;&#x592A;&#x5927;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x53EA;&#x60F3;&#x626B;&#x63CF;&#x6307;&#x5B9A;&#x5305;&#x4E0B;&#x9762;&#x7684;Controller&#xFF0C;&#x8BE5;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x6B64;&#x65F6;&#x5B50;&#x6807;&#x7B7E;<context:incluce-filter>&#x5C31;&#x8D77;&#x5230;&#x4E86;&#x52C7;&#x6B66;&#x4E4B;&#x5730;&#x3002;&#x5982;&#x4E0B;&#x6240;&#x793A;</context:incluce-filter></p>
+<pre><code>&lt;context:component-scan base-package=&quot;tv.huan.weisp.web .controller&quot;&gt;  
+
+&lt;context:include-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;   
+
+&lt;/context:component-scan&gt;  
+</code></pre><p>&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x53EA;&#x626B;&#x63CF;base-package&#x6307;&#x5B9A;&#x4E0B;&#x7684;&#x6709;@Controller&#x4E0B;&#x7684;java&#x7C7B;&#xFF0C;&#x5E76;&#x6CE8;&#x518C;&#x6210;bean</p>
+<p>&#x4F46;&#x662F;&#x56E0;&#x4E3A;use-dafault-filter&#x5728;&#x4E0A;&#x9762;&#x5E76;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x4E3A;true&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x628A;&#x4E0A;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x6539;&#x6210;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x4E0E;&#x4F60;&#x671F;&#x671B;&#x76F8;&#x6096;&#x7684;&#x7ED3;&#x679C;&#xFF08;&#x6CE8;&#x610F;base-package&#x5305;&#x503C;&#x5F97;&#x53D8;&#x5316;&#xFF09;</p>
+<pre><code>&lt;context:component-scan base-package=&quot;tv.huan.weisp.web &quot;&gt;  
+
+&lt;context:include-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;   
+
+&lt;/context:component-scan&gt;  
+</code></pre><p>&#x6B64;&#x65F6;&#xFF0C;spring&#x4E0D;&#x4EC5;&#x626B;&#x63CF;&#x4E86;@Controller&#xFF0C;&#x8FD8;&#x626B;&#x63CF;&#x4E86;&#x6307;&#x5B9A;&#x5305;&#x6240;&#x5728;&#x7684;&#x5B50;&#x5305;service&#x5305;&#x4E0B;&#x6CE8;&#x89E3;@Service&#x7684;java&#x7C7B;</p>
+<p>&#x6B64;&#x65F6;&#x6307;&#x5B9A;&#x7684;include-filter&#x6CA1;&#x6709;&#x8D77;&#x5230;&#x4F5C;&#x7528;&#xFF0C;&#x53EA;&#x8981;&#x628A;use-default-filter&#x8BBE;&#x7F6E;&#x6210;false&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5728;base-packeage&#x914D;&#x7F6E;&#x591A;&#x4E2A;&#x5305;&#x540D;&#x8FD9;&#x79CD;&#x4E0D;&#x662F;&#x5F88;&#x4F18;&#x96C5;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x4E86;&#x3002;&#x5373;&#xFF1A;</p>
+<pre><code>&lt;context:component-scan base-package=&quot;tv.huan.weisp.web&quot;  use-default-filters=&quot;false&quot; &gt;  
+
+&lt;context:include-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;   
+
+&lt;/context:component-scan&gt;
+</code></pre><p>&#x53E6;&#x5916;&#x5728;&#x6211;&#x53C2;&#x4E0E;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x5728;base-package&#x6307;&#x5B9A;&#x7684;&#x5305;&#x4E2D;&#x6709;&#x7684;&#x5B50;&#x5305;&#x662F;&#x4E0D;&#x542B;&#x6709;&#x6CE8;&#x89E3;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x7528;&#x626B;&#x63CF;&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;<context:exclude-filter>&#x6765;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#xFF0C;&#x8BF4;&#x660E;&#x6B64;&#x5305;&#x4E0D;&#x9700;&#x8981;&#x88AB;&#x626B;&#x63CF;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</context:exclude-filter></p>
+<pre><code>&lt;context:component-scan base-package=&quot;com.hqs.htest&quot; use-default-filters=&quot;false&quot; &gt;            
+      &lt;context:exclude-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;&gt;&lt;/context:exclude-filter&gt;
+  &lt;/context:component-scan&gt;
+</code></pre><p>&#x7EFC;&#x5408;&#x4EE5;&#x4E0A;&#x8BF4;&#x660E;</p>
+<ul>
+<li>&#x53EA;&#x6709;use-default-filters=&#x201D;false&#x201D;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF1A;<context:include-filter>&#x624D;&#x4F1A;<strong>&#x53EA;</strong>&#x626B;&#x63CF;&#x6307;&#x5B9A;&#x7684;&#x5305;&#x3002;</context:include-filter></li>
+<li>use-default-filters=&#x201D;true&#x201D;&#x7684;&#x60C5;&#x51B5;(&#x8BE5;&#x5C5E;&#x6027;&#x9ED8;&#x8BA4;&#x4E3A;true),<context:exclude-filter>&#x6392;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x5305;&#x4E0D;&#x8FDB;&#x884C;&#x626B;&#x63CF;&#x3002;</context:exclude-filter></li>
+</ul>
+<hr>
+<p>&#x53C2;&#x8003;&#x81EA;&#xFF1A;<a href="http://blog.csdn.net/chunqiuwei/article/details/16115135" target="_blank" rel="external"><context:component-scan>&#x4F7F;&#x7528;&#x8BF4;&#x660E;</context:component-scan></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;#x5728;xml&amp;#x914D;&amp;#x7F6E;&amp;#x4E86;&amp;#x8FD9;&amp;#x4E2A;&amp;#x6807;&amp;#x7B7E;&amp;#x540E;&amp;#xFF0C;spring&amp;#x53EF;&amp;#x4EE5;&amp;#x81EA;&amp;#x52A8;&amp;#x53BB;&amp;#x626B;&amp;#x63CF;base-pack&amp;#x4E0B;&amp;#x9762;&amp;#x6216;&amp;#x8005;&amp;#x5B50;&amp;#x5305;&amp;#x4E0B;&amp;#x9762;&amp;#x7684;Java&amp;#x6587;&amp;#x4EF6;&amp;#xFF0C;&amp;#x5982;&amp;#x679C;&amp;#x626B;&amp;#x63CF;&amp;#x5230;&amp;#x6709;@Component @Controller@Service&amp;#x7B49;&amp;#x8FD9;&amp;#x4E9B;&amp;#x6CE8;&amp;#x89E3;&amp;#x7684;&amp;#x7C7B;&amp;#xFF0C;&amp;#x5219;&amp;#x628A;&amp;#x8FD9;&amp;#x4E9B;&amp;#x7C7B;&amp;#x6CE8;&amp;#x518C;&amp;#x4E3A;bean&amp;#x3002;&lt;/p&gt;
+&lt;p&gt;&amp;#x6CE8;&amp;#x610F;&amp;#xFF1A;&amp;#x5982;&amp;#x679C;&amp;#x914D;&amp;#x7F6E;&amp;#x4E86;&lt;context:component-scan&gt;&amp;#x90A3;&amp;#x4E48;&lt;context:annotation-config&gt;&amp;#x6807;&amp;#x7B7E;&amp;#x5C31;&amp;#x53EF;&amp;#x4EE5;&amp;#x4E0D;&amp;#x7528;&amp;#x518D;xml&amp;#x4E2D;&amp;#x914D;&amp;#x7F6E;&amp;#x4E86;&amp;#xFF0C;&amp;#x56E0;&amp;#x4E3A;&amp;#x524D;&amp;#x8005;&amp;#x5305;&amp;#x542B;&amp;#x4E86;&amp;#x540E;&amp;#x8005;&amp;#x3002;&amp;#x53E6;&amp;#x5916;&lt;context:annotation-config&gt;&amp;#x8FD8;&amp;#x63D0;&amp;#x4F9B;&amp;#x4E86;&amp;#x4E24;&amp;#x4E2A;&amp;#x5B50;&amp;#x6807;&amp;#x7B7E;&lt;/context:annotation-config&gt;&lt;/context:annotation-config&gt;&lt;/context:component-scan&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;context:include-filter&gt;
+&lt;/context:include-filter&gt;&lt;/li&gt;
+&lt;li&gt;&lt;context:exclude-filter&gt;
+
+&lt;/context:exclude-filter&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&amp;#x5728;&amp;#x8BF4;&amp;#x660E;&amp;#x8FD9;&amp;#x4E24;&amp;#x4E2A;&amp;#x5B50;&amp;#x6807;&amp;#x7B7E;&amp;#x524D;&amp;#xFF0C;&amp;#x5148;&amp;#x8BF4;&amp;#x4E00;&amp;#x4E0B;&lt;context:component-scan&gt;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;use-default-filters&amp;#x5C5E;&amp;#x6027;&amp;#xFF0C;&amp;#x8BE5;&amp;#x5C5E;&amp;#x6027;&amp;#x9ED8;&amp;#x8BA4;&amp;#x4E3A;true,&amp;#x8FD9;&amp;#x5C31;&amp;#x610F;&amp;#x5473;&amp;#x7740;&amp;#x4F1A;&amp;#x626B;&amp;#x63CF;&amp;#x6307;&amp;#x5B9A;&amp;#x5305;&amp;#x4E0B;&amp;#x7684;&amp;#x5168;&amp;#x90E8;&amp;#x7684;&amp;#x6807;&amp;#x6709;@Component&amp;#x7684;&amp;#x7C7B;&amp;#xFF0C;&amp;#x5E76;&amp;#x6CE8;&amp;#x518C;&amp;#x6210;bean&amp;#x3002;&amp;#x4E5F;&amp;#x5C31;&amp;#x662F;@Component&amp;#x7684;&amp;#x5B50;&amp;#x6CE8;&amp;#x89E3;@Service,@Reposity&amp;#x7B49;&amp;#x3002;&amp;#x6240;&amp;#x4EE5;&amp;#x5982;&amp;#x679C;&amp;#x4EC5;&amp;#x4EC5;&amp;#x662F;&amp;#x5728;&amp;#x914D;&amp;#x7F6E;&amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x8FD9;&amp;#x4E48;&amp;#x5199;&lt;/context:component-scan&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;context:component-scan base-package=&amp;quot;tv.huan.weisp.web&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt; Use-default-filter&amp;#x6B64;&amp;#x65F6;&amp;#x4E3A;true&amp;#x90A3;&amp;#x4E48;&amp;#x4F1A;&amp;#x5BF9;base-package&amp;#x5305;&amp;#x6216;&amp;#x8005;&amp;#x5B50;&amp;#x5305;&amp;#x4E0B;&amp;#x7684;&amp;#x6240;&amp;#x6709;&amp;#x7684;&amp;#x8FDB;&amp;#x884C;java&amp;#x7C7B;&amp;#x8FDB;&amp;#x884C;&amp;#x626B;&amp;#x63CF;,&amp;#x5E76;&amp;#x628A;&amp;#x5339;&amp;#x914D;&amp;#x7684;java&amp;#x7C7B;&amp;#x6CE8;&amp;#x518C;&amp;#x6210;bean&amp;#x3002;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="javaWeb" scheme="http://blog.huqs92.com/tags/javaWeb/"/>
+    
+      <category term="springMVC" scheme="http://blog.huqs92.com/tags/springMVC/"/>
+    
+      <category term="component-scan" scheme="http://blog.huqs92.com/tags/component-scan/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何发布文章到hexo搭建的博客网站(转)</title>
     <link href="http://blog.huqs92.com/2016/11/15/%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0%E5%88%B0hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/"/>
     <id>http://blog.huqs92.com/2016/11/15/如何发布文章到hexo搭建的博客网站/</id>
     <published>2016-11-15T14:13:02.000Z</published>
-    <updated>2016-11-15T14:21:13.105Z</updated>
+    <updated>2016-11-16T13:21:00.912Z</updated>
     
     <content type="html"><![CDATA[<p>hexo&#x652F;&#x6301;markdown&#xFF0C;&#x5982;&#x4F55;&#x7F16;&#x8F91;&#x6587;&#x7AE0;&#x5E76;&#x4E14;&#x53D1;&#x5E03;&#x5230;hexo&#x535A;&#x5BA2;&#x7F51;&#x7AD9;&#x4E0A;&#x53BB;&#xFF1F;</p>
 <p><strong>&#x6B65;&#x9AA4;&#x5982;&#x4E0B;</strong>&#xFF1A;</p>
@@ -33,7 +112,10 @@
 </li>
 <li><p>hexo server ,&#x7136;&#x540E;&#x5230;<a href="http://localhost:4000/&#x9884;&#x89C8;&#x7F51;&#x7AD9;&#x6548;&#x679C;&#x3002;" target="_blank" rel="external">http://localhost:4000/&#x9884;&#x89C8;&#x7F51;&#x7AD9;&#x6548;&#x679C;&#x3002;</a></p>
 </li>
-<li><p>&#x6700;&#x540E;&#x540C;&#x6B65;public&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5230;github &#x4E0A;&#x3002;</p>
+<li><p>&#x6700;&#x540E;&#x540C;&#x6B65;public&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5230;github &#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x4F7F;&#x7528;hexo&#x90E8;&#x7F72;&#x6307;&#x4EE4; hexo deploy&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x5B89;&#x88C5;&#x4E86;</p>
+<blockquote>
+<p>hexo-deployer-git<br>&#x5177;&#x4F53;&#x53EF;&#x67E5;&#x770B;&#x6211;&#x7684;&#x6587;&#x7AE0;&#xFF1A;<a href="http://blog.huqs92.com/2016/10/04/hexoBlog/">hexo + github pages&#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;</a>&#x3002;</p>
+</blockquote>
 </li>
 </ol>
 <hr>

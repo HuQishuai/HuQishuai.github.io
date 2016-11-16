@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="胡说博客">
-    <title>一般Java Web的项目目录结构（转） - 胡说博客</title>
+    <title>标签: component-scan - 胡说博客</title>
     <meta name="author" content="Hu Qishuai">
     
     
@@ -15,28 +15,12 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="WebRoot-
-       -common   (&amp;#x7CFB;&amp;#x7EDF;&amp;#x6846;&amp;#x67B6;&amp;#x516C;&amp;#x7528;jsp &amp;#x5982;footer.jsp,header.jsp)
-       -images
-       -scripts  (javascript&amp;#x5E93;&amp;#x7B49;)
-    -styles -   (css&amp;#x6A21;&amp;">
-<meta property="og:type" content="blog">
-<meta property="og:title" content="一般Java Web的项目目录结构（转）">
-<meta property="og:url" content="http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/index.html">
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="胡说博客">
+<meta property="og:url" content="http://blog.huqs92.com/tags/component-scan/index.html">
 <meta property="og:site_name" content="胡说博客">
-<meta property="og:description" content="WebRoot-
-       -common   (&amp;#x7CFB;&amp;#x7EDF;&amp;#x6846;&amp;#x67B6;&amp;#x516C;&amp;#x7528;jsp &amp;#x5982;footer.jsp,header.jsp)
-       -images
-       -scripts  (javascript&amp;#x5E93;&amp;#x7B49;)
-    -styles -   (css&amp;#x6A21;&amp;">
-<meta property="og:updated_time" content="2016-11-15T14:05:23.979Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一般Java Web的项目目录结构（转）">
-<meta name="twitter:description" content="WebRoot-
-       -common   (&amp;#x7CFB;&amp;#x7EDF;&amp;#x6846;&amp;#x67B6;&amp;#x516C;&amp;#x7528;jsp &amp;#x5982;footer.jsp,header.jsp)
-       -images
-       -scripts  (javascript&amp;#x5E93;&amp;#x7B49;)
-    -styles -   (css&amp;#x6A21;&amp;">
+<meta name="twitter:title" content="胡说博客">
     
     
         
@@ -69,7 +53,7 @@
             <!-- Define author's picture -->
 
 
-<header id="header" data-behavior="4">
+<header id="header" data-behavior="1">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">胡说博客</a>
@@ -93,7 +77,7 @@
         
     
 
-<nav id="sidebar" data-behavior="4">
+<nav id="sidebar" data-behavior="1">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -226,149 +210,77 @@
 </nav>
 
             
-            <div id="main" data-behavior="4"
+            <div id="main" data-behavior="1"
                  class="
                         hasCoverMetaIn
                         ">
                 
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    <section class="postShorten-group main-content-wrap">
     
     
-        <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            一般Java Web的项目目录结构（转）
-        </h1>
-    
-    <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-11-15T22:03:48+08:00">
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/11/16/自动扫描组件component-scan说明/">
+                            自动扫描组件&lt;context:component-scan&gt;使用说明
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-11-16T23:20:52+08:00">
 	
-		    11月 15, 2016
+		    11月 16, 2016
     	
     </time>
     
 </div>
 
-</div>
-    
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
-            <pre><code>WebRoot-
-       -common   (&#x7CFB;&#x7EDF;&#x6846;&#x67B6;&#x516C;&#x7528;jsp &#x5982;footer.jsp,header.jsp)
-       -images
-       -scripts  (javascript&#x5E93;&#x7B49;)
-    -styles -   (css&#x6A21;&#x7248;)
-       - css &#x98CE;&#x683C;1
-       - css &#x98CE;&#x683C;2
-       -WEB-INF -
-    -pages   (&#x9879;&#x76EE;jsp&#x9875;&#x9762;&#xFF0C;&#x4E3A;&#x63D0;&#x9AD8;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x653E;&#x5230;WEB-INF &#x4E0B;&#x9762;)
-    -classes
-    -conf(&#x9879;&#x76EE;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;)
-    -lib
-</code></pre><p>&#x5728;ajax&#x98CE;&#x683C;&#x4E0B;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;&#x539F;&#x6765;&#x7684;jsp&#x9875;&#x9762;&#x5F00;&#x53D1;&#x6765;&#x8BF4;&#xFF0C;client&#x7684;&#x8868;&#x8FBE;&#x80FD;&#x529B;&#x5F97;&#x5230;&#x4E86;&#x5F88;&#x5927;&#x7684;&#x63D0;&#x5347;&#xFF0C;<br>&#x5C24;&#x5176;&#x662F;js&#x6587;&#x4EF6;&#x53D8;&#x5F97;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x800C;js&#x6587;&#x4EF6;&#x663E;&#x7136;&#x6BD4;&#x5355;&#x7EAF;&#x7684;jsp&#x6587;&#x4EF6;&#x53EF;&#x8BFB;&#x6027;&#x66F4;&#x9700;&#x8981;&#x7BA1;&#x7406;&#x3002;<br>&#x5982;&#x4F55;&#x63D0;&#x9AD8;js&#x6587;&#x4EF6;&#x7684;&#x53EF;&#x7BA1;&#x7406;&#x80FD;&#x529B;&#xFF0C;&#x53EF;&#x590D;&#x7528;&#x80FD;&#x529B;&#xFF0C;&#x53EF;&#x8BFB;&#x6027;&#xFF0C;&#x7BA1;&#x7406;js lib&#x5E93;&#x7684;&#x5347;&#x7EA7;&#x7B49;<br>&#x662F;ajax&#x98CE;&#x683C;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x95EE;&#x9898;.</p>
-<p>&#x6309;&#x4E0A;&#x9762;&#x7684;&#x76EE;&#x5F55;&#x89C4;&#x5212;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x6269;&#x5C55;</p>
-<pre><code>WebRoot-
-       -common   (&#x7CFB;&#x7EDF;&#x6846;&#x67B6;&#x516C;&#x7528;jsp &#x5982;footer.jsp,header.jsp)
-       -images
-       -scripts  (javascript&#x5E93;&#x7B49;)
-                -dojo                --dojo&#x5E93;,&#x8FDB;&#x884C;&#x5E93;&#x7684;&#x7EDF;&#x4E00;&#x7248;&#x672C;&#x7BA1;&#x7406;
-                -ext                 --extjs&#x5E93;
-                   -project             -- &#x5F53;&#x524D;&#x9879;&#x76EE;js&#x76EE;&#x5F55;
-        -styles -                   (css&#x6A21;&#x7248;)
-               - css &#x98CE;&#x683C;1
-               - css &#x98CE;&#x683C;2
-       -WEB-INF -
-                -pages   (&#x9879;&#x76EE;jsp&#x9875;&#x9762;&#xFF0C;&#x4E3A;&#x63D0;&#x9AD8;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x653E;&#x5230;WEB-INF &#x4E0B;&#x9762;)
-                -classes
-                -conf    (&#x9879;&#x76EE;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;)
-                -lib
-</code></pre><p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x628A;jsp&#x548C;js&#x5206;&#x5F00;&#x653E;&#x7F6E;&#xFF0C;&#x597D;&#x5904;&#x662F;&#x63D0;&#x9AD8;&#x4E86;jsp&#x9875;&#x9762;&#x7684;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x574F;&#x5904;&#x662F;&#x5728;ajax&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;js&#x901A;&#x5E38;&#x548C;&#x9875;&#x9762;&#x5C55;&#x73B0;<br>jsp&#x5173;&#x7CFB;&#x6BD4;&#x8F83;&#x7D27;&#x5BC6;&#xFF0C;&#x5206;&#x5F00;&#x653E;&#x7F6E;&#x9700;&#x8981;&#x627E;2&#x4E2A;&#x5730;&#x65B9;&#x624D;&#x603B;&#x80FD;&#x628A;&#x7A0B;&#x5E8F;&#x770B;&#x5168;&#x4E86;.</p>
-<hr>
-<p>&#x8F6C;&#x8F7D;&#x81EA;&#xFF1A;<a href="http://www.educity.cn/wenda/124790.html" target="_blank" rel="external">&#x6B63;&#x5E38;Java Web&#x7684;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF08;&#x8F6C;&#xFF09;</a></p>
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <p>&#x5728;xml&#x914D;&#x7F6E;&#x4E86;&#x8FD9;&#x4E2A;&#x6807;&#x7B7E;&#x540E;&#xFF0C;spring&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x53BB;&#x626B;&#x63CF;base-pack&#x4E0B;&#x9762;&#x6216;&#x8005;&#x5B50;&#x5305;&#x4E0B;&#x9762;&#x7684;Java&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x626B;&#x63CF;&#x5230;&#x6709;@Component @Controller@Service&#x7B49;&#x8FD9;&#x4E9B;&#x6CE8;&#x89E3;&#x7684;&#x7C7B;&#xFF0C;&#x5219;&#x628A;&#x8FD9;&#x4E9B;&#x7C7B;&#x6CE8;&#x518C;&#x4E3A;bean&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E86;<context:component-scan>&#x90A3;&#x4E48;<context:annotation-config>&#x6807;&#x7B7E;&#x5C31;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x518D;xml&#x4E2D;&#x914D;&#x7F6E;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x524D;&#x8005;&#x5305;&#x542B;&#x4E86;&#x540E;&#x8005;&#x3002;&#x53E6;&#x5916;<context:annotation-config>&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x5B50;&#x6807;&#x7B7E;</context:annotation-config></context:annotation-config></context:component-scan></p>
+<ol>
+<li><context:include-filter>
+</context:include-filter></li>
+<li><context:exclude-filter>
 
+</context:exclude-filter></li>
+</ol>
+<p>&#x5728;&#x8BF4;&#x660E;&#x8FD9;&#x4E24;&#x4E2A;&#x5B50;&#x6807;&#x7B7E;&#x524D;&#xFF0C;&#x5148;&#x8BF4;&#x4E00;&#x4E0B;<context:component-scan>&#x6709;&#x4E00;&#x4E2A;use-default-filters&#x5C5E;&#x6027;&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x9ED8;&#x8BA4;&#x4E3A;true,&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#x4F1A;&#x626B;&#x63CF;&#x6307;&#x5B9A;&#x5305;&#x4E0B;&#x7684;&#x5168;&#x90E8;&#x7684;&#x6807;&#x6709;@Component&#x7684;&#x7C7B;&#xFF0C;&#x5E76;&#x6CE8;&#x518C;&#x6210;bean&#x3002;&#x4E5F;&#x5C31;&#x662F;@Component&#x7684;&#x5B50;&#x6CE8;&#x89E3;@Service,@Reposity&#x7B49;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4EC5;&#x4EC5;&#x662F;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x8FD9;&#x4E48;&#x5199;</context:component-scan></p>
+<pre><code>&lt;context:component-scan base-package=&quot;tv.huan.weisp.web&quot;/&gt;
+</code></pre><p> Use-default-filter&#x6B64;&#x65F6;&#x4E3A;true&#x90A3;&#x4E48;&#x4F1A;&#x5BF9;base-package&#x5305;&#x6216;&#x8005;&#x5B50;&#x5305;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x884C;java&#x7C7B;&#x8FDB;&#x884C;&#x626B;&#x63CF;,&#x5E76;&#x628A;&#x5339;&#x914D;&#x7684;java&#x7C7B;&#x6CE8;&#x518C;&#x6210;bean&#x3002;</p>
+                    
+                        <a href="/2016/11/16/自动扫描组件component-scan说明/" class="postShorten-excerpt_link link">
+                            阅读全文
+                        </a>
+                        
+                    
+                </div>
             
         </div>
-    </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
         
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">标签</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/javaWeb/">javaWeb</a> <a class="tag tag--primary tag--small t-link" href="/tags/目录/">目录</a> <a class="tag tag--primary tag--small t-link" href="/tags/结构/">结构</a>
-
-            </div>
-        
-        <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/15/如何发布文章到hexo搭建的博客网站/"  data-tooltip="如何发布文章到hexo搭建的博客网站(转)">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/04/hexoBlog/" data-tooltip="hexo + github pages搭建个人博客">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
+            <a href="/2016/11/16/自动扫描组件component-scan说明/">
+                <div class="postShorten-thumbnailimg">
+                    <img alt="" itemprop="image" src="http://blog.huqs92.com/2016/11/16/自动扫描组件component-scan说明/spring.jpg"/>
+                </div>
             </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
-        
-            <li class="post-action">
-                <a class="post-action-btn btn btn--default" href="#ds-thread">
-                    <i class="fa fa-comment-o"></i>
-                </a>
-            </li>
-        
-        <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-number">第 1 页 共 1 页</li>
     </ul>
 </div>
 
-
-        
-            
-                <div id="ds-thread" class="ds-thread" data-thread-key="2016/11/15/一般Java Web的项目目录结构（转）/"
-     data-title="一般Java Web的项目目录结构（转）" data-url="http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
-</div>
-
-            
-        
-    </div>
-</article>
-
+</section>
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -378,90 +290,6 @@
 </footer>
 
             </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/15/如何发布文章到hexo搭建的博客网站/"  data-tooltip="如何发布文章到hexo搭建的博客网站(转)">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/04/hexoBlog/" data-tooltip="hexo + github pages搭建个人博客">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
-        
-            <li class="post-action">
-                <a class="post-action-btn btn btn--default" href="#ds-thread">
-                    <i class="fa fa-comment-o"></i>
-                </a>
-            </li>
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-    <ul class="share-options">
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
-                <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
-                <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://blog.huqs92.com/2016/11/15/一般Java Web的项目目录结构（转）/">
-                <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
-
             
         </div>
         
@@ -687,20 +515,6 @@ Enter same passphrase again:&lt;&#x518D;&#x6B21;&#x8F93;&#x5165;&#x52A0;&#x5BC6;
         <!--SCRIPTS-->
 <script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
 <!--SCRIPTS END-->
-
-    
-        <script type="text/javascript">
-            var duoshuoQuery = {short_name:'huqs92'};
-            (function() {
-                var ds = document.createElement('script');
-                ds.type = 'text/javascript';ds.async = true;
-                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                ds.charset = 'UTF-8';
-                (document.getElementsByTagName('head')[0]
-                || document.getElementsByTagName('body')[0]).appendChild(ds);
-            })();
-        </script>
-    
 
 
 
